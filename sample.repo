@@ -1,0 +1,3 @@
+[repository]
+name=repository_name
+baseurl=file:///tmp/sample/
