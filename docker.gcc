@@ -3,24 +3,28 @@ echo 'echo "FROM gcc:10.2" > Dockerfile.gcc-10.2-x86_64'
 echo 'echo "COPY src /usr/src/src" >> Dockerfile.gcc-10.2-x86_64'
 echo 'echo "WORKDIR /usr/src/src" >> Dockerfile.gcc-10.2-x86_64'
 echo 'echo "CMD gcc --version 2>&1 > gcc_version" >> Dockerfile.gcc-10.2-x86_64'
+echo 'echo "CMD gcc -dumpmachine2>&1 >> gcc_version" >> Dockerfile.gcc-10.2-x86_64'
 echo 'echo "ENTRYPOINT make 2>&1 | tee make.log" >> Dockerfile.gcc-10.2-x86_64'
 
 echo 'echo "FROM gcc:4.9" > Dockerfile.gcc-4.9_64'
 echo 'echo "COPY src /usr/src/src" >> Dockerfile.gcc-4.9-x86_64'
 echo 'echo "WORKDIR /usr/src/src" >> Dockerfile.gcc-4.9-x86_64'
 echo 'echo "CMD gcc --version 2>&1 > gcc_version" >> Dockerfile.gcc-4.9-x86_64'
+echo 'echo "CMD gcc -dumpmachine2>&1 >> gcc_version" >> Dockerfile.gcc-4.9-x86_64'
 echo 'echo "ENTRYPOINT make 2>&1 | tee make.log" >> Dockerfile.gcc-4.9-x86_64'
 
 echo 'echo "FROM i686/gcc:10.2" > Dockerfile.gcc-10.2-i686'
 echo 'echo "COPY src /usr/src/src" >> Dockerfile.gcc-10.2-i686'
 echo 'echo "WORKDIR /usr/src/src" >> Dockerfile.gcc-10.2-i686'
 echo 'echo "CMD gcc --version 2>&1 > gcc_version" >> Dockerfile.gcc-10.2-i686'
+echo 'echo "CMD gcc -dumpmachine2>&1 >> gcc_version" >> Dockerfile.gcc-10.2-i686'
 echo 'echo "ENTRYPOINT make 2>&1 | tee make.log" >> Dockerfile.gcc-10.2-i686'
 
 echo 'echo "FROM i686/gcc:4.9" > Dockerfile.gcc-4.9-i686'
 echo 'echo "COPY src /usr/src/src" >> Dockerfile.gcc-4.9-i686'
 echo 'echo "WORKDIR /usr/src/src" >> Dockerfile.gcc-4.9-i686'
 echo 'echo "CMD gcc --version 2>&1 > gcc_version" >> Dockerfile.gcc-4.9-i686'
+echo 'echo "CMD gcc -dumpmachine2>&1 >> gcc_version" >> Dockerfile.gcc-4.9-i686'
 echo 'echo "ENTRYPOINT make 2>&1 | tee make.log" >> Dockerfile.gcc-4.9-i686'
 
 
