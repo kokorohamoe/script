@@ -1,0 +1,5 @@
+#!/bin/sh
+
+echo "FROM tianon/sleeping-beauty" > dock/Dockerfile
+docker build -t sleeping dock
+
