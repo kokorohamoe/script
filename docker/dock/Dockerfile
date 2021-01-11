@@ -1,1 +1,0 @@
-FROM tianon/sleeping-beauty

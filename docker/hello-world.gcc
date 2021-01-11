@@ -1,0 +1,11 @@
+#!/bin/sh
+
+echo "FROM gcc" > dock/Dockerfile
+echo "#include<stdio.h>" >dock/main.c
+echo "int main(int argc,char*argv[]){">> dock/main.c
+echo 'printf("");}'>>dock/main.c
+echo "COPY main.c /tmp/main.c" >>dock/Dockerfile
+echo "ENTRYPOINT gcc /tmp/main.c">>dock/Dockerfile
+
+#docker build -t sleeping dock
+
