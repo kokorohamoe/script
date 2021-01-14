@@ -1,0 +1,10 @@
+#!/bin/sh
+
+echo "FROM gcc:4.9" > dock/Dockerfile
+echo "COPY . /usr/src/myapp" >> dock/Dockerfile
+echo "WORKDIR /usr/src/myapp" >> dock/Dockerfile
+echo "RUN gcc -o myapp main.c" >> dock/Dockerfile
+echo 'CMD ["./myapp"]'>> dock/Dockerfile
+
+docker build -t gcc dock
+
